@@ -1,0 +1,6 @@
+{
+  "name": "Kasih Dua Monika - Creative Portfolio",
+  "description": "Interactive, responsive, and offline-ready creative portfolio of Kasih Dua Monika, featuring 3D modeling, AR mobile development, graphic design, branding, and photography.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
