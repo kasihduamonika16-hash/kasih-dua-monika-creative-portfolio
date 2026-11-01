@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1B1FB8"/>
+      <stop offset="100%" stop-color="#0E1275"/>
+    </linearGradient>
+    <linearGradient id="limeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#84F01A"/>
+      <stop offset="100%" stop-color="#55C900"/>
+    </linearGradient>
+  </defs>
+  <!-- Background with slight rounding for any-purpose icon -->
+  <rect width="512" height="512" rx="100" fill="url(#brandGrad)"/>
+  
+  <!-- Geometric decorative accents resembling Monika's portfolio -->
+  <circle cx="96" cy="96" r="32" fill="url(#limeGrad)"/>
+  <rect x="360" y="64" width="80" height="24" rx="12" fill="url(#limeGrad)"/>
+  
+  <!-- Central Stylized monogram 'M' / Creative Mark -->
+  <path d="M128 390 L128 170 L210 295 L256 225 L302 295 L384 170 L384 390 L324 390 L324 285 L276 355 L236 355 L188 285 L188 390 Z" fill="#FFFFFF"/>
+  <path d="M210 295 L256 365 L302 295 L256 225 Z" fill="url(#limeGrad)"/>
+  
+  <!-- Bottom Accent Tag -->
+  <rect x="146" y="415" width="220" height="28" rx="14" fill="#FFFFFF" fill-opacity="0.15"/>
+  <text x="256" y="435" text-anchor="middle" fill="#84F01A" font-family="system-ui, sans-serif" font-weight="bold" font-size="16" letter-spacing="2">MONIKA PORTFOLIO</text>
+</svg>

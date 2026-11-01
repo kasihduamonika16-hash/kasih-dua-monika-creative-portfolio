@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    font-family: 'Montserrat', system-ui, sans-serif;
+    background-color: #f8fafc;
+    color: #0f172a;
+  }
+  
+  h1, h2, h3, h4, h5, h6, .font-display {
+    font-family: 'Montserrat', system-ui, sans-serif;
+  }
+}
+
+.portfolio-light-theme :not(svg) {
+  font-family: 'Montserrat', system-ui, sans-serif !important;
+  color: #000000 !important;
+}
+
+.portfolio-light-theme .hero-headline {
+  color: #000000 !important;
+}
+
+.portfolio-light-theme .hero-headline-gradient {
+  color: transparent !important;
+  -webkit-text-fill-color: transparent;
+}
+
+.portfolio-light-theme [aria-current="page"],
+.portfolio-light-theme [aria-current="page"] :not(svg) {
+  color: #3f6212 !important;
+}
+
+.portfolio-light-theme {
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+.portfolio-light-theme [class*="bg-slate-"]:not(.absolute),
+.portfolio-light-theme [class*="bg-blue-950"]:not(.absolute),
+.portfolio-light-theme [class*="from-slate-"]:not(.absolute),
+.portfolio-light-theme [class*="from-blue-9"]:not(.absolute),
+.portfolio-light-theme [class*="via-slate-"]:not(.absolute),
+.portfolio-light-theme [class*="via-blue-9"]:not(.absolute),
+.portfolio-light-theme [class*="to-slate-"]:not(.absolute) {
+  background-color: rgba(255, 255, 255, 0.62) !important;
+  background-image: none !important;
+  backdrop-filter: blur(16px);
+}
+
+.portfolio-light-theme [class*="border-slate-"],
+.portfolio-light-theme [class*="border-blue-9"] {
+  border-color: rgba(100, 116, 139, 0.28) !important;
+}
+
+.portfolio-light-theme ::placeholder {
+  color: #000000 !important;
+  opacity: 1;
+}
+
+.portfolio-light-theme :is(button, a[href], [role="button"], .cursor-pointer) {
+  transition-property: transform, translate, box-shadow, color, background-color, border-color, opacity;
+  transition-duration: 180ms;
+  transition-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .portfolio-light-theme :is(button, a[href], [role="button"], .cursor-pointer):hover {
+    translate: 0 -2px;
+  }
+}
+
+.portfolio-light-theme :is(button, a[href], [role="button"], .cursor-pointer):active {
+  translate: 0 0;
+}
+
+.portfolio-light-theme :is(button, a[href], [role="button"], .cursor-pointer):focus-visible {
+  outline: 2px solid #65a30d;
+  outline-offset: 3px;
+}
+
+/* Custom scrollbars for presentation & thumbnail scroller */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(226, 232, 240, 0.8);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.45);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(101, 163, 13, 0.75);
+}
