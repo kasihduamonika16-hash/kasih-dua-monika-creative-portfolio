@@ -21,6 +21,7 @@ export const PageViewerModal: React.FC<PageViewerModalProps> = ({
   const [copiedLink, setCopiedLink] = useState<boolean>(false);
 
   const currentPage = PORTFOLIO_PAGES.find((p) => p.pageNumber === pageNumber) || null;
+  const imageExtension = currentPage?.image.split('.').pop() ?? 'jpg';
 
   // Reset zoom whenever page changes
   useEffect(() => {
@@ -90,7 +91,7 @@ export const PageViewerModal: React.FC<PageViewerModalProps> = ({
         {/* Left info: Page numbering and title */}
         <div className="flex items-center gap-3 overflow-hidden">
           <span className="flex h-7 px-2.5 items-center justify-center rounded-lg bg-lime-400 font-mono text-xs font-bold text-slate-950">
-            Page {String(currentPage.pageNumber).padStart(2, '0')} / 18
+            Page {String(currentPage.pageNumber).padStart(2, '0')} / {PORTFOLIO_PAGES.length}
           </span>
           <div className="truncate">
             <h2 className="text-xs sm:text-sm font-bold text-white truncate">
@@ -159,7 +160,7 @@ export const PageViewerModal: React.FC<PageViewerModalProps> = ({
           {/* Download Current Page Image */}
           <a
             href={currentPage.image}
-            download={`Kasih_Dua_Monika_Page_${String(currentPage.pageNumber).padStart(2, '0')}.jpg`}
+            download={`Kasih_Dua_Monika_Page_${String(currentPage.pageNumber).padStart(2, '0')}.${imageExtension}`}
             className="p-2 rounded-lg border border-slate-800 bg-slate-900 text-slate-400 hover:text-white transition"
             title="Download this page image (full resolution)"
           >

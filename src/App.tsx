@@ -10,6 +10,7 @@ import { PageViewerModal } from './components/PageViewerModal';
 import { FlipbookReader } from './components/FlipbookReader';
 import { HostingGuideModal } from './components/HostingGuideModal';
 import { OfflineIndicator } from './components/OfflineIndicator';
+import { PORTFOLIO_PAGES } from './data/portfolioData';
 
 export default function App() {
   const [activePageModal, setActivePageModal] = useState<number | null>(null);
@@ -25,7 +26,7 @@ export default function App() {
       const match = hash.match(/#page-(\d+)/);
       if (match && match[1]) {
         const pageNum = parseInt(match[1], 10);
-        if (pageNum >= 1 && pageNum <= 18) {
+        if (PORTFOLIO_PAGES.some((page) => page.pageNumber === pageNum)) {
           setActivePageModal(pageNum);
         }
       }
@@ -79,7 +80,7 @@ export default function App() {
           onOpenHostingGuide={() => setHostingGuideOpen(true)}
         />
 
-        {/* 18-Page Interactive Filter & Grid */}
+        {/* Interactive portfolio filter and grid */}
         <CategoryFilterGrid
           onOpenPage={handleOpenPage}
           onOpenFlipbookAt={(pageNum) => handleOpenFlipbook(pageNum)}

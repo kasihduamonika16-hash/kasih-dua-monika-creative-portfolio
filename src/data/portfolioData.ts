@@ -3,7 +3,7 @@ export interface PortfolioPage {
   pageNumber: number;
   title: string;
   subtitle: string;
-  category: 'profile' | 'ar_3d' | 'media' | 'posters' | 'editorial' | 'photo' | 'branding' | 'film';
+  category: 'profile' | 'ar_3d' | 'media' | 'posters' | 'editorial' | 'photo' | 'branding' | 'film' | 'data_analyst';
   categoryLabel: string;
   image: string;
   thumbnail: string;
@@ -14,16 +14,16 @@ export interface PortfolioPage {
   quote?: string;
 }
 
-export const CATEGORIES = [
-  { id: 'all', label: 'All Pages', count: 18 },
-  { id: 'profile', label: 'Profile & Experience', count: 4 },
-  { id: 'ar_3d', label: 'AR & 3D Modelling', count: 2 },
-  { id: 'media', label: 'Campus Digital Media', count: 3 },
-  { id: 'editorial', label: 'Cover E-Book PKM', count: 1 },
-  { id: 'posters', label: 'Poster Design', count: 1 },
-  { id: 'photo', label: 'Photography & Color Grading', count: 2 },
-  { id: 'branding', label: 'Branding & Apparel', count: 3 },
-  { id: 'film', label: 'Film & Cinematography', count: 1 },
+const CATEGORY_DEFINITIONS = [
+  { id: 'profile', label: 'Profile & Experience' },
+  { id: 'ar_3d', label: 'AR & 3D Modelling' },
+  { id: 'media', label: 'Campus Digital Media' },
+  { id: 'editorial', label: 'Cover E-Book PKM' },
+  { id: 'posters', label: 'Poster Design' },
+  { id: 'photo', label: 'Photography & Color Grading' },
+  { id: 'branding', label: 'Branding & Apparel' },
+  { id: 'film', label: 'Film & Cinematography' },
+  { id: 'data_analyst', label: 'Data Analyst Bootcamp' },
 ] as const;
 
 export const PORTFOLIO_PAGES: PortfolioPage[] = [
@@ -355,25 +355,126 @@ export const PORTFOLIO_PAGES: PortfolioPage[] = [
     yearOrPeriod: '2019 - 2025',
     quote: 'A few short films I’ve worked on. Even though they were small team efforts, they gave me so much new experience.'
   },
+  
   {
-    id: 18,
-    pageNumber: 18,
-    title: 'Let’s Connect! — Closing & Contact',
-    subtitle: 'Kasih Dua Monika · Lampung, Indonesia',
-    category: 'profile',
-    categoryLabel: 'Contact & Collaboration',
-    image: '/pages/page_18.jpg',
-    thumbnail: '/pages/thumb_18.jpg',
-    description: 'A closing page with official contact channels for graphic design, 3D modeling, video production, and creative collaboration.',
+    id: 19,
+    pageNumber: 19,
+    title: 'Data Analyst Bootcamp — SQL Mini Project',
+    subtitle: 'KarirNex · Excel, SQL & Python',
+    category: 'data_analyst',
+    categoryLabel: 'Data Analyst Bootcamp',
+    image: '/pages/data-analyst/page_19.png',
+    thumbnail: '/pages/data-analyst/page_19.png',
+    description: 'A practical bootcamp project analyzing a 10,000-row transaction dataset, with SQL exercises for recent orders, brand quantities, customer spending, and product prices.',
     highlights: [
-      'Email: kasihduamonika16@gmail.com',
-      'WhatsApp / Phone: +62 877 5037 1700 / 08876647009',
-      'Instagram: @monikashii',
-      'LinkedIn: Kasih Dua Monika',
-      'Twitter / X: @KasihDua35296',
-      'Based in: Lampung, Indonesia'
+      'KarirNex bootcamp held on 25, 27, and 29 November 2025',
+      '10 hours of learning and a 5-hour mini project',
+      'Worked with dummy transaction data containing 10,000 rows',
+      'Curriculum covered data formatting and cleansing, introductory Python, data collection, visualization, career paths, and case studies',
+      'SQL tasks included the 100 latest transactions, quantity by brand, top customers by grand total, and product price queries',
+      'Day 3 included creating ATS-friendly and creative CVs'
     ],
-    tools: ['WhatsApp', 'Email', 'LinkedIn', 'Instagram', 'Creative Networking'],
-    quote: 'That’s a wrap! Thanks for sticking around. I’m always down for new projects or even just a quick chat about design. Let’s make something cool together!'
+    tools: ['Excel', 'SQL', 'SQLite', 'Google Colab', 'Python'],
+    yearOrPeriod: 'November 2025',
+    quote: 'A one-week intensive bootcamp using Excel, SQL, and Python.'
+  },
+  {
+    id: 20,
+    pageNumber: 20,
+    title: 'Sales Quantity by Brand',
+    subtitle: 'SQL aggregation · Grouping and sorting',
+    category: 'data_analyst',
+    categoryLabel: 'Data Analyst Bootcamp',
+    image: '/pages/data-analyst/page_20.png',
+    thumbnail: '/pages/data-analyst/page_20.png',
+    description: 'A SQL query groups transaction quantities by brand and ranks the results to compare sales volume.',
+    highlights: [
+      'Aggregated quantities for each brand',
+      'Used GROUP BY and SUM in SQL',
+      'Sorted results from highest to lowest quantity'
+    ],
+    tools: ['SQL', 'SQLite', 'Data Analysis'],
+    yearOrPeriod: '2025'
+  },
+  {
+    id: 21,
+    pageNumber: 21,
+    title: 'Lowest-Priced Products',
+    subtitle: 'SQL sorting · Product price analysis',
+    category: 'data_analyst',
+    categoryLabel: 'Data Analyst Bootcamp',
+    image: '/pages/data-analyst/page_21.png',
+    thumbnail: '/pages/data-analyst/page_21.png',
+    description: 'A query returns ten products with the lowest prices from the transaction dataset.',
+    highlights: [
+      'Selected product names and prices',
+      'Sorted prices in ascending order',
+      'Limited the result to ten products'
+    ],
+    tools: ['SQL', 'SQLite', 'Data Analysis'],
+    yearOrPeriod: '2025'
+  },
+  {
+    id: 22,
+    pageNumber: 22,
+    title: 'Top Products by Quantity',
+    subtitle: 'Data visualization · Product performance',
+    category: 'data_analyst',
+    categoryLabel: 'Data Analyst Bootcamp',
+    image: '/pages/data-analyst/page_22.png',
+    thumbnail: '/pages/data-analyst/page_22.png',
+    description: 'A bar chart compares quantities sold across products to make high-volume items easy to identify.',
+    highlights: [
+      'Compared product quantities in a bar chart',
+      'Highlighted the best-selling items in the dataset',
+      'Practiced communicating findings visually'
+    ],
+    tools: ['Excel', 'Data Visualization'],
+    yearOrPeriod: '2025'
+  },
+  {
+    id: 23,
+    pageNumber: 23,
+    title: 'Product Price Comparison',
+    subtitle: 'Data visualization · Price ranking',
+    category: 'data_analyst',
+    categoryLabel: 'Data Analyst Bootcamp',
+    image: '/pages/data-analyst/page_23.png',
+    thumbnail: '/pages/data-analyst/page_23.png',
+    description: 'A chart compares product prices and makes the highest-priced items stand out in the transaction data.',
+    highlights: [
+      'Compared prices across products',
+      'Identified the highest-priced items',
+      'Presented the results with a bar chart'
+    ],
+    tools: ['Excel', 'Data Visualization'],
+    yearOrPeriod: '2025'
+  },
+  {
+    id: 24,
+    pageNumber: 24,
+    title: 'Brand Contribution by Price',
+    subtitle: 'Data visualization · Brand comparison',
+    category: 'data_analyst',
+    categoryLabel: 'Data Analyst Bootcamp',
+    image: '/pages/data-analyst/page_24.png',
+    thumbnail: '/pages/data-analyst/page_24.png',
+    description: 'A pie chart compares brands by their contribution to transaction value.',
+    highlights: [
+      'Compared price contribution across brands',
+      'Visualized each brand’s share as a proportion',
+      'Practiced summarizing categorical data'
+    ],
+    tools: ['Excel', 'Data Visualization'],
+    yearOrPeriod: '2025'
   }
+];
+
+export const CATEGORIES = [
+  { id: 'all', label: 'All Pages', count: PORTFOLIO_PAGES.length },
+  ...CATEGORY_DEFINITIONS.map(({ id, label }) => ({
+    id,
+    label,
+    count: PORTFOLIO_PAGES.filter((page) => page.category === id).length,
+  })),
 ];

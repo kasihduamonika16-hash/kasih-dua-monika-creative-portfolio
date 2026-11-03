@@ -102,7 +102,7 @@ export const CategoryFilterGrid: React.FC<CategoryFilterGridProps> = ({
 
         {/* Results Counter */}
         <div className="mt-4 flex items-center justify-between text-xs text-slate-400">
-          <span>Showing <strong>{filteredPages.length}</strong> of 18 pages</span>
+          <span>Showing <strong>{filteredPages.length}</strong> of {PORTFOLIO_PAGES.length} pages</span>
           {searchQuery && (
             <span>Search term: "<span className="text-lime-400">{searchQuery}</span>"</span>
           )}

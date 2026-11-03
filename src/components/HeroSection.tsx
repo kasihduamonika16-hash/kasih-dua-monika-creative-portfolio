@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowDown, BookOpen, Download, Sparkles, Smartphone, CheckCircle2, MessageCircle } from 'lucide-react';
+import { PORTFOLIO_PAGES } from '../data/portfolioData';
 
 interface HeroSectionProps {
   onExploreClick: () => void;
@@ -41,7 +42,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               </h1>
 
               <p className="mx-auto max-w-3xl text-xs sm:text-sm text-slate-300 leading-relaxed text-center">
-                A glimpse into my creative journey, professional experiences, and projects, ranging from 3D cosmetic product modeling and Augmented Reality (AR) mobile application development to university graphic design, research-based e-book modules for the Student Creativity Program (PKM), photography collections, and short film productions. Explore my work! 
+                A glimpse into my creative journey, professional experiences, and projects, from data analysis with Excel and SQL to 3D cosmetic product modeling, Augmented Reality (AR), university graphic design, research-based e-book modules, photography, and short film production. Explore my work!
               </p>
             </div>
 
@@ -78,7 +79,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                     <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-xs font-semibold text-white">
                       <span className="flex items-center gap-1.5 text-lime-400">
                         <Sparkles className="w-3.5 h-3.5" />
-                        <span>Page 01 / 18</span>
+                        <span>Page 01 / {PORTFOLIO_PAGES.length}</span>
                       </span>
                     </div>
                   </div>
@@ -91,7 +92,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                   onClick={onExploreClick}
                   className="flex items-center justify-center gap-2.5 rounded-xl bg-lime-400 px-5 py-3 text-sm font-extrabold text-slate-950 shadow-lg shadow-lime-400/25 hover:bg-lime-300 active:scale-95 transition-all"
                 >
-                  <span>View All 18 Pages</span>
+                  <span>View All {PORTFOLIO_PAGES.length} Pages</span>
                   <ArrowDown className="w-4 h-4 stroke-[2.5]" />
                 </button>
               </div>

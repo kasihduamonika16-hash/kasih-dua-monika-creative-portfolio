@@ -105,7 +105,7 @@ export const HostingGuideModal: React.FC<HostingGuideModalProps> = ({ isOpen, on
                     Download the Complete Project Source Code
                   </h3>
                   <p className="text-xs text-slate-300">
-                    Includes all React, TypeScript, and Tailwind CSS files, 18 high-resolution images, PWA icons, and the README.md guide.
+                    Includes all React, TypeScript, and Tailwind CSS files, portfolio images, PWA icons, and the README.md guide.
                   </p>
                 </div>
 
@@ -176,8 +176,8 @@ export const HostingGuideModal: React.FC<HostingGuideModalProps> = ({ isOpen, on
                       4. Where can you edit the text and portfolio pages?
                     </div>
                     <ul className="space-y-1.5 text-slate-300 text-[11px] list-disc list-inside">
-                      <li><strong>Text and data for all 18 pages</strong>: Open <code className="text-lime-300">src/data/portfolioData.ts</code> to edit titles, descriptions, software, contact details, and quotes.</li>
-                      <li><strong>Page images</strong>: Stored in <code className="text-lime-300">public/pages/page_01.jpg</code> through <code className="text-lime-300">page_18.jpg</code>.</li>
+                      <li><strong>Portfolio text and data</strong>: Open <code className="text-lime-300">src/data/portfolioData.ts</code> to edit titles, descriptions, software, contact details, and quotes.</li>
+                      <li><strong>Page images</strong>: Stored in <code className="text-lime-300">public/pages/</code>, with Data Analyst Bootcamp images in <code className="text-lime-300">public/pages/data-analyst/</code>.</li>
                       <li><strong>Monika's photo</strong>: Stored in <code className="text-lime-300">public/assets/monika_photo.png</code>.</li>
                     </ul>
                   </div>
@@ -268,7 +268,7 @@ export const HostingGuideModal: React.FC<HostingGuideModalProps> = ({ isOpen, on
                     <span>Online Mode</span>
                   </div>
                   <p className="text-slate-300 text-xs">
-                    Visitors and clients can open your website URL in a browser on a phone, tablet, or computer. A <em>Service Worker</em> automatically caches all 18 high-resolution images and portfolio data in the background.
+                    Visitors and clients can open your website URL in a browser on a phone, tablet, or computer. A <em>Service Worker</em> automatically caches the portfolio images and data in the background.
                   </p>
                 </div>
 

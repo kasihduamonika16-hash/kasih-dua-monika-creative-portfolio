@@ -99,7 +99,7 @@ export const FlipbookReader: React.FC<FlipbookReaderProps> = ({
         <div className="flex items-center gap-3">
           <div className="flex items-center gap-2">
             <span className="flex h-7 px-2.5 items-center justify-center rounded-lg bg-lime-400 font-mono text-xs font-black text-slate-950">
-              {String(currentPageNum).padStart(2, '0')} / 18
+              {String(currentPageNum).padStart(2, '0')} / {PORTFOLIO_PAGES.length}
             </span>
             <span className="text-xs sm:text-sm font-bold text-white truncate max-w-[200px] sm:max-w-md">
               {currentPage.title}
@@ -223,13 +223,13 @@ export const FlipbookReader: React.FC<FlipbookReaderProps> = ({
           <input
             type="range"
             min="1"
-            max="18"
+            max={PORTFOLIO_PAGES.length}
             value={currentPageNum}
             onChange={(e) => setCurrentPageNum(Number(e.target.value))}
             className="w-full accent-lime-400 cursor-pointer h-2 bg-slate-800 rounded-lg"
           />
           <span className="font-mono text-xs font-bold text-lime-400 shrink-0 w-12 text-right">
-            {currentPageNum} / 18
+            {currentPageNum} / {PORTFOLIO_PAGES.length}
           </span>
         </div>
 

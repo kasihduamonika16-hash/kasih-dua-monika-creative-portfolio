@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Menu, X, FileDown, Sparkles, Phone, BookOpen, Layers } from 'lucide-react';
 import { PWAInstallButton } from './PWAInstallButton';
 import { useOnlineStatus } from '../hooks/useOnlineStatus';
+import { PORTFOLIO_PAGES } from '../data/portfolioData';
 
 interface NavbarProps {
   onOpenFlipbook: () => void;
@@ -54,7 +55,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               activeSection === 'gallery' ? 'text-lime-700' : ''
             }`}
           >
-            All Pages (18)
+            All Pages ({PORTFOLIO_PAGES.length})
           </button>
           <button
             onClick={() => handleNavClick('about')}
@@ -126,7 +127,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               className="flex items-center gap-3 rounded-lg px-3 py-2 text-left text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:text-lime-700 transition"
             >
               <Layers className="w-4 h-4 text-lime-400" />
-              <span>Browse 18 Portfolio Pages</span>
+              <span>Browse {PORTFOLIO_PAGES.length} Portfolio Pages</span>
             </button>
             <button
               onClick={() => handleNavClick('about')}
