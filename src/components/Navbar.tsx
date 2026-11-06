@@ -5,15 +5,11 @@ import { useOnlineStatus } from '../hooks/useOnlineStatus';
 import { PORTFOLIO_PAGES } from '../data/portfolioData';
 
 interface NavbarProps {
-  onOpenFlipbook: () => void;
-  onOpenHostingGuide: () => void;
   activeSection: string;
   onNavigate: (sectionId: string) => void;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({
-  onOpenFlipbook,
-  onOpenHostingGuide,
   activeSection,
   onNavigate,
 }) => {
@@ -155,37 +151,6 @@ export const Navbar: React.FC<NavbarProps> = ({
             </button>
           </div>
 
-          <div className="pt-2 border-t border-slate-200/80 flex flex-col gap-2">
-            <button
-              onClick={() => {
-                onOpenHostingGuide();
-                setMobileMenuOpen(false);
-              }}
-              className="flex w-full items-center justify-center gap-2 rounded-xl border border-lime-700/30 bg-lime-500/10 px-4 py-2.5 text-xs font-bold text-lime-800 hover:bg-lime-500/20 transition"
-            >
-              <Sparkles className="w-4 h-4" />
-              <span>Download Source Code (ZIP) & Hosting Guide</span>
-            </button>
-            <button
-              onClick={() => {
-                onOpenFlipbook();
-                setMobileMenuOpen(false);
-              }}
-              className="flex w-full items-center justify-center gap-2 rounded-xl bg-blue-600 px-4 py-2.5 text-xs font-bold text-white shadow-md hover:bg-blue-500 transition"
-            >
-              <BookOpen className="w-4 h-4" />
-              <span>Open Interactive Flipbook (Swipe Through Pages)</span>
-            </button>
-            <a
-              href="https://wa.me/6287750371700?text=Hello%20Monika,%20I%20am%20interested%20in%20your%20design%20portfolio!"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex w-full items-center justify-center gap-2 rounded-xl bg-lime-400 px-4 py-2 text-xs font-bold text-slate-950 shadow-md hover:bg-lime-300 transition"
-            >
-              <Phone className="w-4 h-4 stroke-[2.5]" />
-              <span>Contact via WhatsApp</span>
-            </a>
-          </div>
         </div>
       )}
     </header>

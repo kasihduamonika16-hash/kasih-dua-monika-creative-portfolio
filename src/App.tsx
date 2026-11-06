@@ -64,8 +64,6 @@ export default function App() {
     <div className="portfolio-light-theme min-h-screen bg-white text-slate-900 flex flex-col antialiased selection:bg-lime-400 selection:text-slate-950">
       {/* Top Navbar adhering to the top bar contract */}
       <Navbar
-        onOpenFlipbook={() => handleOpenFlipbook(1)}
-        onOpenHostingGuide={() => setHostingGuideOpen(true)}
         activeSection={activeSection}
         onNavigate={handleNavigate}
       />
